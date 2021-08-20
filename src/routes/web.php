@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('phone-home');
 });
+
+Route::view('/splash', 'splash')
+    ->name('splash.get');
+
+Route::view('/landing', 'landing')
+    ->name('landing.get');
+
+Route::view('/course/{name}', 'course')
+    ->name('course.get');
