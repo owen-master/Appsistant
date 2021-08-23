@@ -25,7 +25,14 @@
 <div class="p-2">
     @if(request()['name'] != 'Help')
 
-        {{ request()['name'] }} tutorial development is in progress.
+        <div class="text-center" style="padding-top: 30%;">
+            <h1>{{ request()['name'] }}</h1>
+
+            <img src="/assets/under_construction_man.jpg" height="120x" width="auto">
+            <h2>Coming Soon</h2>
+
+            <p> This tutorial is currently under construction... Please come back later </p>
+        </div>
 
     @else
 
