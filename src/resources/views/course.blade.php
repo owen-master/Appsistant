@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row p-2" style="background: #887bb0; opacity: 80%">
+<div class="row p-2 pt-4" style="background: #887bb0; opacity: 80%">
     <div class="col-2 container-fluid">
         <a href="{{ url()->previous() }}" class="text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
