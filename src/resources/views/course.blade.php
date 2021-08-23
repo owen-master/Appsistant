@@ -29,7 +29,15 @@
 
     @else
 
-        The help page is in progress.
+        <div class="container">
+            <div class="row">
+                <p>Our tutorials are broken into 2 types</p>
+                A short video tutorial that can be started and stopped by tapping the screen.
+                <img src="/assets/vidfinger.png" height="110px" >
+                A step by step tutorial that can be scrolled by running your finger up or down the screen.
+                <img src="/assets/scrolling.png" height="110px" >
+            </div>
+        </div>
 
     @endif
 </div>
