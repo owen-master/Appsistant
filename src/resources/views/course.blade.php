@@ -28,7 +28,7 @@
         <div class="text-center" style="padding-top: 30%;">
             <h1>{{ request()['name'] }}</h1>
 
-            <img src="/assets/under_construction_man.jpg" height="120x" width="auto">
+            <img src="/assets/under_construction_man.png" height="120x" width="auto">
             <h2>Coming Soon</h2>
 
             <p> This tutorial is currently under construction... Please come back later </p>
