@@ -25,13 +25,15 @@
 <div class="p-2">
     @if(request()['name'] != 'Help')
 
-        <div class="text-center" style="padding-top: 30%;">
+        <div class="text-center position-relative" style="height: 100%; width: 100%">
+            <div class="position-absolute top-50 left-50">
             <h1>{{ request()['name'] }}</h1>
 
             <img src="/assets/under_construction_man.png" height="120x" width="auto">
             <h2>Coming Soon</h2>
 
             <p> This tutorial is currently under construction... Please come back later </p>
+            </div>
         </div>
 
     @else
