@@ -118,7 +118,6 @@
             border-radius: .2em;
             position: absolute;
             top: .7em;
-            /*TODO HERE SET TOP TO ABOVE*/
             left: .7em;
         }
     </style>
@@ -129,7 +128,7 @@
     <div class="iphone_left"></div>
     <div class="iphone_details"></div>
     <div class="iphone_screen">
-        <div class="iphone_content">
+        <div class="iphone_content" style="background-color: #eae7e2;">
             {{--Content Here--}}
             <div class="container" style="position: absolute; z-index: 100">
                 <div class="row">

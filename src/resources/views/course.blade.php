@@ -38,13 +38,13 @@
 
     @else
 
-        <div class="container">
-            <div class="row">
-                <p>Our tutorials are broken into 2 types</p>
-                A short video tutorial that can be started and stopped by tapping the screen.
-                <img src="/assets/vidfinger.png" height="110px" >
-                A step by step tutorial that can be scrolled by running your finger up or down the screen.
-                <img src="/assets/scrolling.png" height="110px" >
+        <div class="text-center position-relative" style="height: 100%; width: 100%;">
+            <div class="" style="overflow-y: scroll; height: 23.5em;" tabindex="0">
+                <h1>Need Help?</h1>
+                <p>Our tutorials are broken into two types. A short video tutorial that can be started and stopped by tapping the screen.</p>
+                <img src="/assets/vidfinger.png" height="auto" width="200px" class="pb-3">
+                <p>We also have a step by step tutorial that can be scrolled by running your finger up or down the screen.</p>
+                <img src="/assets/scrolling.png" height="auto" width="200px" class="pb-3" >
             </div>
         </div>
 

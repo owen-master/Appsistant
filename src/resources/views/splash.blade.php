@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="text-center" style="padding-top: 30%;">
-        <img src="/assets/logo.jpg" height="90px" width="90px">
+        <img src="/assets/logo.png" height="90px" width="90px">
         <h1>Appsistant</h1>
         <small>We got you!</small>
     </div>
