@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccessibilityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +26,6 @@ Route::view('/landing', 'landing')
 
 Route::view('/course/{name}', 'course')
     ->name('course.get');
+
+Route::get('/settings', [AccessibilityController::class, 'showSettings'])
+    ->name('settings.get');
