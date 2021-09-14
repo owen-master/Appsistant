@@ -29,3 +29,6 @@ Route::view('/course/{name}', 'course')
 
 Route::get('/settings', [AccessibilityController::class, 'showSettings'])
     ->name('settings.get');
+
+Route::post('/settings', [AccessibilityController::class, 'updateSettings'])
+    ->name('settings.post');
