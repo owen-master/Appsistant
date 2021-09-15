@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="col-8 container-fluid text-center">
-        <p class="mb-0 text-white"><b>{{request()['name']}} @if(request()['name'] != 'Help')Tutorial @endif</b></p>
+        <p class="mb-0" style="{!! \App\Http\Helpers\ColourPalletHelper::getFontColourStyleHeading() !!}"><b>{{request()['name']}} @if(request()['name'] != 'Help')Tutorial @endif</b></p>
     </div>
     <div class="col-2 container-fluid">
 

@@ -15,6 +15,12 @@
             {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
         }
 
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
         .iphone {
             width: 21.06em;
             height: 35.6em;

@@ -9,7 +9,7 @@
         <div class="col-2 container-fluid">
         </div>
         <div class="col-8 container-fluid text-center">
-            <p class="mb-0 text-white"><b>Appsistant | Home</b></p>
+            <p class="mb-0" style="{!! \App\Http\Helpers\ColourPalletHelper::getFontColourStyleHeading() !!}"><b>Appsistant | Home</b></p>
         </div>
         <div class="col-2 container-fluid">
             <a href="{{ route('settings.get') }}" class="text-white">

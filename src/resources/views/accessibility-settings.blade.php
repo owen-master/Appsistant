@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="col-8 container-fluid text-center">
-        <p class="mb-0 text-white"><b>Accessibility Settings</b></p>
+        <p class="mb-0" style="{!! \App\Http\Helpers\ColourPalletHelper::getFontColourStyleHeading() !!}"><b>Accessibility Settings</b></p>
     </div>
     <div class="col-2 container-fluid">
 
@@ -34,15 +34,11 @@
 
         <!-- Header Colour Input -->
         <label for="input_colour_header" class="form-label pb-0 mb-0"><b>Customise Header Colour</b></label>
-        <br>
         <input type="color" name="header_colour" id="input_colour_header" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
-        <br>
 
         <!-- Font Colour Input-->
         <label for="input_colour_font" class="form-label pb-0 mb-0"><b>Customise Font Colour</b></label>
-        <br>
         <input type="color" name="font_colour" id="input_colour_font" value="{!! \App\Http\Helpers\ColourPalletHelper::getFontColour() !!}" />
-        <br>
 
         <button type="submit" class="btn btn-lg btn-outline-dark container-fluid align-text-bottom">Save</button>
     </form>
