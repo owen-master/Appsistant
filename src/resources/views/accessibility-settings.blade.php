@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row p-2 pt-4" style="background: #887bb0; opacity: 80%">
+<div class="row p-2 pt-4" {!! \App\Http\Helpers\ColourPalletHelper::getHeaderStyle() !!}}>
     <div class="col-2 container-fluid">
         <a href="{{ url()->previous() }}" class="text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="col-8 container-fluid text-center">
-        <p class="mb-0 text-white"><b>Accessibility Settings</b></p>
+        <p class="mb-0" style="{!! \App\Http\Helpers\ColourPalletHelper::getFontColourStyleHeading() !!}"><b>Accessibility Settings</b></p>
     </div>
     <div class="col-2 container-fluid">
 
@@ -31,6 +31,15 @@
         <label for="input_font_size" class="form-label pb-0 mb-0"><b>Font Size</b></label>
         <small class="d-block" id="text_font_size_help">Displaying text at {{ \App\Http\Helpers\FontSizeHelper::getSizeScale() }}% of original size.</small>
         <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\FontSizeHelper::getExcludingSizeScale() }}" id="input_font_size" name="font_scale">
+
+        <!-- Header Colour Input -->
+        <label for="input_colour_header" class="form-label pb-0 mb-0"><b>Customise Header Colour</b></label>
+        <input type="color" name="header_colour" id="input_colour_header" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
+
+        <!-- Font Colour Input-->
+        <label for="input_colour_font" class="form-label pb-0 mb-0"><b>Customise Font Colour</b></label>
+        <input type="color" name="font_colour" id="input_colour_font" value="{!! \App\Http\Helpers\ColourPalletHelper::getFontColour() !!}" />
+
         <button type="submit" class="btn btn-lg btn-outline-dark container-fluid align-text-bottom">Save</button>
     </form>
 </div>

@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="row p-2 pt-4" style="background: #887bb0; opacity: 80%">
+<div class="row p-2 pt-4" {!! \App\Http\Helpers\ColourPalletHelper::getHeaderStyle() !!}}>
     <div class="col-2 container-fluid">
         <a href="{{ url()->previous() }}" class="text-white">
             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
@@ -15,7 +15,7 @@
         </a>
     </div>
     <div class="col-8 container-fluid text-center">
-        <p class="mb-0 text-white"><b>{{request()['name']}} @if(request()['name'] != 'Help')Tutorial @endif</b></p>
+        <p class="mb-0" style="{!! \App\Http\Helpers\ColourPalletHelper::getFontColourStyleHeading() !!}"><b>{{request()['name']}} @if(request()['name'] != 'Help')Tutorial @endif</b></p>
     </div>
     <div class="col-2 container-fluid">
 

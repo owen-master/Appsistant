@@ -12,6 +12,13 @@
     <style>
         body {
             background: #c9c6e1;
+            {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
+        }
+
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
         }
 
         .iphone {
