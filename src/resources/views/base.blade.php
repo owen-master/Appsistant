@@ -12,6 +12,7 @@
     <style>
         body {
             background: #c9c6e1;
+            {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
         }
 
         .iphone {

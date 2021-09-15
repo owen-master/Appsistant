@@ -33,9 +33,16 @@
         <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\FontSizeHelper::getExcludingSizeScale() }}" id="input_font_size" name="font_scale">
 
         <!-- Header Colour Input -->
-        <label for="input_colour_pallet" class="form-label pb-0 mb-0"><b>Customise Header</b></label>
+        <label for="input_colour_header" class="form-label pb-0 mb-0"><b>Customise Header Colour</b></label>
         <br>
-        <input type="color" name="header_colour" id="input_colour_pallet" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
+        <input type="color" name="header_colour" id="input_colour_header" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
+        <br>
+
+        <!-- Font Colour Input-->
+        <label for="input_colour_font" class="form-label pb-0 mb-0"><b>Customise Font Colour</b></label>
+        <br>
+        <input type="color" name="font_colour" id="input_colour_font" value="{!! \App\Http\Helpers\ColourPalletHelper::getFontColour() !!}" />
+        <br>
 
         <button type="submit" class="btn btn-lg btn-outline-dark container-fluid align-text-bottom">Save</button>
     </form>
