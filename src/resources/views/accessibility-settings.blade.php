@@ -31,6 +31,12 @@
         <label for="input_font_size" class="form-label pb-0 mb-0"><b>Font Size</b></label>
         <small class="d-block" id="text_font_size_help">Displaying text at {{ \App\Http\Helpers\FontSizeHelper::getSizeScale() }}% of original size.</small>
         <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\FontSizeHelper::getExcludingSizeScale() }}" id="input_font_size" name="font_scale">
+
+        <!-- Header Colour Input -->
+        <label for="input_colour_pallet" class="form-label pb-0 mb-0"><b>Customise Header</b></label>
+        <br>
+        <input type="color" name="header_colour" id="input_colour_pallet" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
+
         <button type="submit" class="btn btn-lg btn-outline-dark container-fluid align-text-bottom">Save</button>
     </form>
 </div>
