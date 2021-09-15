@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="p-3 pt-4" style="min-height: 100%; background: mintcream;">
+    <div class="p-3 pt-4" {!! \App\Http\Helpers\ColourPalletHelper::getHeaderStyle() !!}}>
         <div class="container">
             <div class="row my-2">
                 <div class="col-4">
