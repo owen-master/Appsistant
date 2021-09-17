@@ -12,7 +12,22 @@
     <style>
         body {
             background: #c9c6e1;
-            {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
+            color: {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
+        }
+
+        .top-menu {
+            color: #ffffff;
+        }
+
+        .btn:not(.btn-dark) {
+            color: {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
+            border-color: {!! App\Http\Helpers\ColourPalletHelper::getFontColourStyle() !!};
+
+        }
+
+        .btn:hover {
+            color: #ffffff;
+            border-color: dimgrey;
         }
 
 
@@ -137,7 +152,7 @@
     <div class="iphone_screen">
         <div class="iphone_content" style="background-color: #eae7e2;">
             {{--Content Here--}}
-            <div class="container" style="position: absolute; z-index: 100">
+            <div class="container top-menu" style="position: absolute; z-index: 100">
                 <div class="row">
                     <div class="col text-start">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
