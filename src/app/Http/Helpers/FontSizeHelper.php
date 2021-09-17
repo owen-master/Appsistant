@@ -9,7 +9,7 @@ class FontSizeHelper {
     const S_KEY_SIZE_SCALE = 'SESSION_FONT_SIZE_SCALE';
 
     // returns the title font size in the session or the default
-    private static function getScaledFontSize($originalSizeInPixels)
+    public static function getScaledFontSize($originalSizeInPixels)
     {
         return ($originalSizeInPixels / 100) * self::getSizeScale();
     }
