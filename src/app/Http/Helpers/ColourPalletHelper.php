@@ -42,7 +42,7 @@ class ColourPalletHelper {
     // returns the font colour styling
     public static function getFontColourStyle()
     {
-        return 'color: ' . self::getFontColour() . ';';
+        return self::getFontColour();
     }
 
     public static function getFontColourStyleHeading()
