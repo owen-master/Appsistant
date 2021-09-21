@@ -45,6 +45,17 @@
                 <img src="/assets/vidfinger.png" height="auto" width="200px" class="pb-3">
                 <p>We also have a step by step tutorial that can be scrolled by running your finger up or down the screen.</p>
                 <img src="/assets/scrolling.png" height="auto" width="200px" class="pb-3" >
+
+                <p>To access the Accessibility Settings options, click on the Settings icon.</p>
+                <img src="/assets/settings_icon.png" height="auto" width="200px" class="pb-3">
+                <p>Change font size by dragging the slider to increase or decrease font size to your preference.</p>
+                <img src="/assets/font_size.png" height="auto" width="200px" class="pb-3">
+                <p>Customise header colour by clicking colour bar to choose colour.</p>
+                <img src="/assets/header_color.png" height="auto" width="200px" class="pb-3">
+                <p>Change font colour by clicking the colour bar to change font colour.</p>
+                <img src="/assets/font_color.png" height="auto" width="200px" class="pb-3">
+                <p>Click on Save button to save your customise settings.</p>
+                <img src="/assets/save_button.png" height="auto" width="200px" class="pb-3">
             </div>
         </div>
 
