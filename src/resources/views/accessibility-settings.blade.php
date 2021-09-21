@@ -26,12 +26,14 @@
     <form method="POST" action="">
 
         @csrf()
-
+        
         <!-- Font Size Range Input -->
-        <label for="input_font_size" class="form-label pb-0 mb-0"><b>Font Size</b></label>
-        <small class="d-block" id="text_font_size_help">Displaying text at {{ \App\Http\Helpers\FontSizeHelper::getSizeScale() }}% of original size.</small>
-        <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\FontSizeHelper::getExcludingSizeScale() }}" id="input_font_size" name="font_scale">
+        <label for="input_font_size" class="form-label pb-0 mb-0"><b>Set Font Size</b></label>
+        <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\FontSizeHelper::getExcludingSizeScale() }}" id="input_font_size" name="font_scale"> <!-- slider -->
 
+        <!--read and adjust text font size using javascript fontSize ID -->
+        <label for="input_font_size" class="form-label pb-0 mb-0" style="height:40px; text-align:center;" id="fontSize" >&nbsp</label><br>
+        
         <!-- Header Colour Input -->
         <label for="input_colour_header" class="form-label pb-0 mb-0"><b>Customise Header Colour</b></label>
         <input type="color" name="header_colour" id="input_colour_header" value="{!! \App\Http\Helpers\ColourPalletHelper::getHeaderColour() !!}" />
@@ -50,8 +52,11 @@
 
     <script type="text/javascript">
         $('#input_font_size').change(function(event) {
-            let newSizeValue = parseInt($('#input_font_size').val()) + 100;
-            $('#text_font_size_help').text('Displaying text at ' + newSizeValue + '% of original size');
+            let defaultFontSize = 12; //set default font size
+            let newSizeValue = parseInt(defaultFontSize * (parseInt($('#input_font_size').val()) + 100) / 100); //set font size range from 100% to 200% of default size
+            let fontSize = '<b style="color:#0D6EFD; font-size:' + newSizeValue + 'px">Text Size</b>'; //set style value to be passed to the label on slider change
+            
+            document.getElementById("fontSize").innerHTML = fontSize; //pass fontSize value to accessable variable
         });
     </script>
 
