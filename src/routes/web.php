@@ -32,3 +32,6 @@ Route::get('/settings', [AccessibilityController::class, 'showSettings'])
 
 Route::post('/settings', [AccessibilityController::class, 'updateSettings'])
     ->name('settings.post');
+
+Route::get('/model', [AccessibilityController::class, 'modelChange'])
+    ->name('model.get');
