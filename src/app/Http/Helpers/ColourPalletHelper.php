@@ -47,6 +47,6 @@ class ColourPalletHelper {
 
     public static function getFontColourStyleHeading()
     {
-        return 'color: ' . self::getFontColour() . '; filter: invert(100%);';
+        return 'color: ' . self::getFontColour() . '; filter: invert(100%); padding-top: 0.5em';
     }
 }
