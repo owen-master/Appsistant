@@ -33,6 +33,10 @@
 
         <!--read and adjust text font size using javascript fontSize ID -->
         <label for="input_font_size" class="form-label pb-0 mb-0" style="height:40px; text-align:center;" id="fontSize" >&nbsp</label><br>
+
+        <!-- Icon Size Range Input -->
+        <label for="input_icon_size" class="form-label pb-0 mb-0"><b>Set Icon Size</b></label>
+        <input type="range" class="form-range" min="0" max="100" step="10" value="{{ \App\Http\Helpers\IconSizeHelper::getExcludingSizeScale() }}" id="input_icon_size" name="icon_scale"> <!-- slider -->
         
         <!-- Header Colour Input -->
         <label for="input_colour_header" class="form-label pb-0 mb-0"><b>Customise Header Colour</b></label>
