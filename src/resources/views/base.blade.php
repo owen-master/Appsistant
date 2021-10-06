@@ -227,7 +227,7 @@
     <div class="android-details"></div>
     <div class="android-left"></div>
     <div class="android-screen">
-        <div class="android-content">
+        <div class="android-content" style="background-color: #eae7e2;">
             <div class="container top-menu" style="position: absolute; z-index: 100; background-color: black; width: 100%; padding-left: 14em">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-wifi" viewBox="0 0 16 16">
                     <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.444 12.444 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.518.518 0 0 0 .668.05A11.448 11.448 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049z"/>
