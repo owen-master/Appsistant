@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\ColourPalletHelper;
 use App\Http\Helpers\FontSizeHelper;
-use Illuminate\Http\Request;
+use App\Http\Helpers\PhoneModelHelper;
 
 class AccessibilityController extends Controller
 {
@@ -28,5 +28,11 @@ class AccessibilityController extends Controller
 
         // redirect the user to the landing page
         return redirect()->route('landing.get');
+    }
+
+    public function modelChange()
+    {
+        PhoneModelHelper::toggleModel();
+        return redirect(url()->previous());
     }
 }

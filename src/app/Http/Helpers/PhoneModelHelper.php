@@ -7,17 +7,12 @@ class PhoneModelHelper {
     const SESSION_MODE = 'SESSION_PHONE_MODE';
 
     public static function getModel() {
-        $mode = session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
-
-        return $mode;
+        return session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
     }
 
-    public static function setModel() {
+    public static function toggleModel() {
         $mode = session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
-
-        $new_mode = !$mode;
-
-        session()->put(self::SESSION_MODE, $new_mode);
+        return session()->put(self::SESSION_MODE, !$mode);
     }
 
 }

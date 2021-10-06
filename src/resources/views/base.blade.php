@@ -145,6 +145,24 @@
     </style>
 </head>
 <body>
+
+<form style="position:absolute; right: 1em; top: 1em;">
+    <button type="button" onclick="window.location.href='{{ route('model.get') }}'" name="modelButton" class="btn btn-primary model-button">Model</button>
+</form>
+
+
+<?php
+        $test =\App\Http\Helpers\PhoneModelHelper::getModel();
+        if ($test) {
+            echo '<div>hello</div>';
+//            \App\Http\Helpers\PhoneModelHelper::toggleModel();
+        } else {
+            echo '<div>goodbye</div>';
+//            \App\Http\Helpers\PhoneModelHelper::toggleModel();
+        }
+?>
+
+
 <div class="iphone">
     <div class="iphone_power"></div>
     <div class="iphone_left"></div>
