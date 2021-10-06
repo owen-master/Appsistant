@@ -3,31 +3,21 @@ namespace App\Http\Helpers;
 
 
 class PhoneModelHelper {
-    const DEFAULT_MODE = false;
+
     const SESSION_MODE = 'SESSION_PHONE_MODE';
 
+    const MODEL_IPHONE = 'IPHONE';
+    const MODEL_ANDROID = 'ANDROID';
+
     public static function toggleModel() {
-        $mode = session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
-        return session()->put(self::SESSION_MODE, !$mode);
+
+        $mode = session()->get(self::SESSION_MODE, self::MODEL_IPHONE);
+
+        return $mode == self::MODEL_IPHONE ? session()->put(self::SESSION_MODE, self::MODEL_ANDROID) :
+            session()->put(self::SESSION_MODE, self::MODEL_IPHONE);
     }
 
-    public static function getIphone() {
-        $mode = session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
-
-        if ($mode) {
-            return 'style="display: block"';
-        } else {
-            return 'style="display: none"';
-        }
+    public static function getModel() {
+        return session()->get(self::SESSION_MODE, self::MODEL_IPHONE);
     }
-
-    public static function getAndroid() {
-        $mode = session()->get(self::SESSION_MODE, self::DEFAULT_MODE);
-
-        if ($mode) {
-            return 'style="display: none"';
-        } else {
-            return 'style="display: block"';
-        }    }
-
 }
