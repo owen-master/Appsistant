@@ -26,7 +26,7 @@
                 <b class="pb-2" style="text-align: center">Select a course to get started.</b>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Camera']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
                             <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
                             <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
                         </svg>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Calendar']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
                             <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
                             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                         </svg>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Clock']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                             <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                         </svg>
@@ -56,7 +56,7 @@
                 </div>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Contacts']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
                         </svg>
 
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Email']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
                         </svg>
 
@@ -74,7 +74,7 @@
                 </div>
                 <div class="col pb-2">
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Messages']) }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                             <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
                             <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9.06 9.06 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.437 10.437 0 0 1-.524 2.318l-.003.011a10.722 10.722 0 0 1-.244.637c-.079.186.074.394.273.362a21.673 21.673 0 0 0 .693-.125zm.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6c0 3.193-3.004 6-7 6a8.06 8.06 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a10.97 10.97 0 0 0 .398-2z"/>
                         </svg>
