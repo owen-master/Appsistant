@@ -25,6 +25,58 @@
 
         }
 
+        .search {
+            width: 100%;
+            margin-top: 1em;
+            margin-bottom: .5em;
+            padding: 0.5em;
+            border: solid gray 0.1em;
+            border-radius: 20px;
+        }
+
+        .app-hub {
+            background: #2d374880;
+        }
+
+        @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+        .btn-dark:not(.btn-lg) {
+            border-radius: 50%;
+            padding-bottom: 0.6em;
+        }
+
+        .btn-top {
+            margin-top: 1em;
+        }
+
+        .btn-btm::before {
+            position: absolute;
+            content: '';
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 50%;
+            background-color: gray;
+            bottom: 4em;
+        }
+
+        .btm-1::before {
+            left: 6em;
+            background-color: black;
+        }
+
+        .btm-2::before {
+            left: 1em;
+        }
+
+        .btm-3::before {
+            right: 6em;
+        }
+
+        .app-hub {
+            background: none;
+        }
+
+        @endif
+
         .btn:hover {
             color: #ffffff;
             border-color: dimgrey;
@@ -95,7 +147,7 @@
 
         .android-screen {
             width: 19.5em;
-            height: 27.938em;
+            height: 29.938em;
             position: absolute;
             top: 3.75em;
             left: .750em;
@@ -219,11 +271,11 @@
 </head>
 <body>
 
-<form style="position:absolute; right: 1em; top: 1em;">
-    <button type="button" onclick="window.location.href='{{ route('model.get') }}'" name="modelButton" class="btn btn-primary model-button">Change Phone</button>
-</form>
-
 @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+    <form style="position:absolute; right: 1em; top: 1em;">
+        <button type="button" onclick="window.location.href='{{ route('model.get') }}'" name="modelButton" class="btn btn-primary model-button">Change to IOS Phone</button>
+    </form>
+
     <div class="android">
         <div class="android-details"></div>
         <div class="android-left"></div>
@@ -249,9 +301,36 @@
                 @yield('content')
             </div>
         </div>
-        <div class="android-home" onclick="location.href='/';" style="cursor: pointer"></div>
+
+        <div style="width: 100%; height: auto; position: absolute; bottom: 1.6em;">
+            <div class="container">
+                <div class="row py-2">
+                    <div class="col-4">
+                        <svg style="margin-left: 50%; transform: translateX(-50%)" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#000000" class="bi bi-caret-left" viewBox="0 0 16 16">
+                            <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                        </svg>
+                    </div>
+                    <div class="col-4">
+                        <svg onclick="location.href='/';" style="margin-left: 50%; transform: translateX(-50%); cursor: pointer" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#000000" class="bi bi-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        </svg>
+                    </div>
+                    <div class="col-4">
+                        <svg style="margin-left: 50%; transform: translateX(-50%)" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" class="bi bi-app" viewBox="0 0 16 16">
+                            <path d="M11 2a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zM5 1a4 4 0 0 0-4 4v6a4 4 0 0 0 4 4h6a4 4 0 0 0 4-4V5a4 4 0 0 0-4-4H5z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{--<div class="android-home" onclick="location.href='/';" style="cursor: pointer"></div>--}}
     </div>
 @else
+    <form style="position:absolute; right: 1em; top: 1em;">
+        <button type="button" onclick="window.location.href='{{ route('model.get') }}'" name="modelButton" class="btn btn-primary model-button">Change to Android Phone</button>
+    </form>
+
     <div class="iphone">
         <div class="iphone_power"></div>
         <div class="iphone_left"></div>
@@ -262,24 +341,24 @@
                 <div class="container top-menu" style="position: absolute; z-index: 100">
                     <div class="row">
                         <div class="col text-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#000000"
                                  class="bi bi-bar-chart" viewBox="0 0 16 16">
                                 <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
                             </svg>
 
-                            <small><small><small><small>Telstra</small></small></small></small>
+                            <small><small><small><small style="color: black;">Telstra</small></small></small></small>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wifi-2 pb-1" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" class="bi bi-wifi-2 pb-1" viewBox="0 0 16 16">
                                 <path d="M13.229 8.271c.216-.216.194-.578-.063-.745A9.456 9.456 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.577 1.336c.205.132.48.108.652-.065zm-2.183 2.183c.226-.226.185-.605-.1-.75A6.473 6.473 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.408.19.611.09A5.478 5.478 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.611-.091l.015-.015zM9.06 12.44c.196-.196.198-.52-.04-.66A1.99 1.99 0 0 0 8 11.5a1.99 1.99 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .708 0l.707-.707z"/>
                             </svg>
                         </div>
                         <div class="col text-center">
-                            <small><small><small><small>{{\Illuminate\Support\Carbon::now()->format('h:i')}}</small></small></small></small>
+                            <small><small><small><small style="color: black;">{{\Illuminate\Support\Carbon::now()->format('h:i')}}</small></small></small></small>
                         </div>
-                        <div class="col text-end">
-                            <small><small><small><small>69%</small></small></small></small>
+                        <div class="col text-end ">
+                            <small><small><small><small style="color: black;">69%</small></small></small></small>
 
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-battery-half" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="000000" class="bi bi-battery-half" viewBox="0 0 16 16">
                                 <path d="M2 6h5v4H2V6z"/>
                                 <path d="M2 4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H2zm10 1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h10zm4 3a1.5 1.5 0 0 1-1.5 1.5v-3A1.5 1.5 0 0 1 16 8z"/>
                             </svg>
