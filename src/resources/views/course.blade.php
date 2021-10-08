@@ -32,6 +32,16 @@
 
         <div class="text-center position-relative" style="height: 100%; width: 100%">
             <div class="position-absolute top-50 left-50">
+                @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                <h1>Android {{ request()['name'] }}</h1>
+
+                <img src="/assets/under_construction_man.png" height="120x" width="auto">
+                <h2>Coming Soon</h2>
+
+                <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
+                    <p> This tutorial is currently under construction... Please come back later </p>
+                </div>
+                    @else
             <h1>{{ request()['name'] }}</h1>
 
             <img src="/assets/under_construction_man.png" height="120x" width="auto">
@@ -40,6 +50,7 @@
                 <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
                     <p> This tutorial is currently under construction... Please come back later </p>
                 </div>
+                @endif
             </div>
         </div>
 
