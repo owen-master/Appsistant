@@ -25,6 +25,14 @@
             <div class="row">
                 <b class="pb-2" style="text-align: center">Select a course to get started.</b>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Camera']) }}">
+                            <img src="/assets/android_camera.png" width="20px" height="auto">
+
+
+                            <small class="d-block">camera</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Camera']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
                             <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
@@ -33,8 +41,17 @@
 
                         <small class="d-block">camera</small>
                     </a>
+                    @endif
                 </div>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Calendar']) }}">
+                            <img src="/assets/android_calendar.png" width="20px" height="auto">
+
+
+                            <small class="d-block">calendar</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Calendar']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
                             <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
@@ -43,8 +60,17 @@
 
                         <small class="d-block">calendar</small>
                     </a>
+                    @endif
                 </div>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Clock']) }}">
+                                <img src="/assets/android_clock.png" width="20px" height="auto">
+
+
+                            <small class="d-block">clock</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Clock']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
                             <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
@@ -53,8 +79,17 @@
 
                         <small class="d-block">clock</small>
                     </a>
+                    @endif
                 </div>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Contacts']) }}">
+                            <img src="/assets/android_contacts.png" width="20px" height="auto">
+
+
+                            <small class="d-block">contacts</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Contacts']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
                             <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
@@ -62,8 +97,17 @@
 
                         <small class="d-block">contacts</small>
                     </a>
+                    @endif
                 </div>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Email']) }}">
+                            <img src="/assets/android_email.png" width="20px" height="auto">
+
+
+                            <small class="d-block">email</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Email']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
@@ -71,8 +115,17 @@
 
                         <small class="d-block">email</small>
                     </a>
+                    @endif
                 </div>
                 <div class="col pb-2">
+                    @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
+                        <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Messages']) }}">
+                            <img src="/assets/android_message.png" width="20px" height="auto">
+
+
+                            <small class="d-block">messages</small>
+                        </a>
+                    @else
                     <a type="button" class="btn btn-lg btn-outline-dark container-fluid" href="{{ route('course.get', ['name' => 'Messages']) }}">
                         <svg xmlns="http://www.w3.org/2000/svg" {{ \App\Http\Helpers\IconSizeHelper::getHeightWidthAttributes(16) }} fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
                             <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
@@ -81,6 +134,7 @@
 
                         <small class="d-block">messages</small>
                     </a>
+                    @endif
                 </div>
             </div>
             <div class="row">
