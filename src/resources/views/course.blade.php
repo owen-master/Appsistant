@@ -30,27 +30,43 @@
 <div class="p-2">
     @if(request()['name'] != 'Help')
 
-        <div class="text-center position-relative" style="height: 100%; width: 100%">
+        <div class="position-relative" style="height: 100%; width: 100%">
             <div class="position-absolute top-50 left-50">
-                @if(\App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_ANDROID)
-                <h1>Android {{ request()['name'] }}</h1>
 
-                <img src="/assets/under_construction_man.png" height="120x" width="auto">
-                <h2>Coming Soon</h2>
+                @if(request()['name'] == 'Camera')
+                    <!-- Camera tutorial content goes inside this section! -->
+                        <h5>Video Demo</h5>
+                        <div>
+                            <!-- Video goes in here -->
+                        </div>
+                        <h5>Instructions</h5>
+                        <div {{ $setFontSize }}>
+                            <!-- Short instructions go in here -->
+                            <ol>
+                                <li class="small text-left">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li class="small text-left">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                                <li class="small text-left">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                </li>
+                            </ol>
+                        </div>
+                @else()
+                    <div class="text-center">
+                        <img src="/assets/under_construction_man.png" height="120x" width="auto">
+                        <h2>Coming Soon</h2>
 
-                <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
-                    <p> This tutorial is currently under construction... Please come back later </p>
-                </div>
-                    @else
-            <h1>{{ request()['name'] }}</h1>
-
-            <img src="/assets/under_construction_man.png" height="120x" width="auto">
-            <h2>Coming Soon</h2>
-
-                <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
-                    <p> This tutorial is currently under construction... Please come back later </p>
-                </div>
-                @endif
+                        <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
+                            <p> This tutorial is currently under construction... Please come back later </p>
+                        </div>
+                    </div>
+                @endif()
             </div>
         </div>
 
