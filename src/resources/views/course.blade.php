@@ -48,28 +48,33 @@
                             <!-- Short instructions go in here -->
                             <ol>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    To access the Camera App, press the Home button on your phone below the screen
+                                    and you will see the Camera App.
                                 </li>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    Tap the Camera icon to access the camera. You will see a view from your back
+                                    camera with various options below the camera view.
                                 </li>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    Select the Photo option.
                                 </li>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    Choose the view you want to capture and tap the white button to capture.
                                 </li>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    To view the photo you took, tap the image in the bottom-left of your screen.
                                 </li>
                                 <li class="small text-left">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
+                                    To view previous photos, swipe your screen right.
+                                </li>
+                                <li class="small text-left">
+                                    To view your latest photos, swipe your screen left.
+                                </li>
+                                <li class="small text-left">
+                                    Press the Back arrow on the top-left of your screen to return to the camera function.
+                                </li>
+                                <li class="small text-left">
+                                    To exit the Camera App, press the Home button.
                                 </li>
                             </ol>
                         </div>
