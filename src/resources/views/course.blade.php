@@ -61,10 +61,11 @@
                 <h1>Need Help?</h1>
 
                 <div class="" <?php echo $setFontSize?>> <!-- set font size from Accessibility page slider -->
-                    <p>Our tutorials are broken into two types. A short video tutorial that can be started and stopped by tapping the screen.</p>
-                    <img src="/assets/vidfinger.png" height="auto" width="200px" class="pb-3">
-                    <p>We also have a step by step tutorial that can be scrolled by running your finger up or down the screen.</p>
+                    <p>Our tutorials are broken into two types. A step by step tutorial that can be scrolled by running
+                        your finger up or down the screen</p>
                     <img src="/assets/scrolling.png" height="auto" width="200px" class="pb-3" >
+                    <p>We also have a short video tutorial that can be started and stopped by tapping the screen.</p>
+                    <img src="/assets/vidfinger.png" height="auto" width="200px" class="pb-3">
                     <p>To access the Accessibility Settings options, click on the Settings icon.</p>
                     <img src="/assets/settings_icon.png" height="auto" width="200px" class="pb-3">
                     <p>Change font size by dragging the slider to increase or decrease font size to your preference.</p>
