@@ -33,7 +33,7 @@
             <div class="position-relative" style="height: 100%; width: 100%;">
                 <div class="position-absolute left-50">
 
-                @if(request()['name'] == 'Camera')
+                @if(request()['name'] == 'Camera' && \App\Http\Helpers\PhoneModelHelper::getModel() == \App\Http\Helpers\PhoneModelHelper::MODEL_IPHONE)
                     <!-- Camera tutorial content goes inside this section! -->
                         <h5>Video Demo</h5>
                         <video width="100%" height="240" controls>
