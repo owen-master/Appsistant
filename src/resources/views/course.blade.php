@@ -44,7 +44,7 @@
                             <!-- Video goes in here -->
                         </div>
                         <h5>Instructions</h5>
-                        <div {{ $setFontSize }}>
+                        <div {!! $setFontSize !!}>
                             <!-- Short instructions go in here -->
                             <ol>
                                 <li class="small text-left">
